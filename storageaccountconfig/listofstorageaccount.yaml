@@ -1,3 +1,10 @@
 listofstorageaccount:
-  - name: beststorageaccountever
+  - name: beststorageaccountever1
+    account_tier:standard
+    account_replication_type:LRS
+    cross_tenany_replication_enabled:true
+  - name: beststorageaccountever2
+    account_tier:standard
+    account_replication_type:LRS
+    cross_tenany_replication_enabled:true
   
