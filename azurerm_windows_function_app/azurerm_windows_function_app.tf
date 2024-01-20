@@ -55,4 +55,13 @@ resource "azurerm_subnet" "db" {
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.3.0/24"]
 }
+module "central_three_tier_app" {
+  source              = "./centralized_modules/three_tier_app"
+  resource_group_name = "example-resource-group"
+  location            = "East US"
+  vnet_name           = "example-vnet"
+  subnet_web_name     = "web-subnet"
+  subnet_app_name     = "app-subnet"
+  subnet_db_name      = "db-subnet"
+}
 
